@@ -1,3 +1,6 @@
+/* App.css */
+
+/* Layout Container */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,15 +8,18 @@
   text-align: center;
 }
 
+/* Logo Animation */
 .logo {
   height: 6em;
   padding: 1.5em;
+  transition: filter 300ms ease;
   will-change: filter;
-  transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -28,15 +34,63 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
+  .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
+/* Card Styling */
 .card {
-  padding: 2em;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(2, 2, 2, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 2rem;
 }
 
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0 0 5px #1a1aff;
+}
+
+/* Read The Docs */
 .read-the-docs {
-  color: #888;
+  color: #aaaaaa;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+/* Responsive Media */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .logo {
+    height: 4em;
+  }
+
+  .card {
+    padding: 1.2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
 }

@@ -4,20 +4,15 @@ import { motion } from 'framer-motion';
 function Contact() {
   return (
     <motion.section
-      className="contact-section bg-gray-800 text-white p-8"
+      id="contact"
+      className="bg-gray-950 text-white p-16 rounded-2xl shadow-xl mb-12"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 1 }}
     >
-      <h2 className="text-3xl font-semibold">Contact Me</h2>
-      <p className="mt-4 text-lg">
-        Feel free to reach out to me for collaborations or any queries!
-      </p>
-      <p className="mt-2">
-        <a href="mailto:harsh@example.com" className="text-blue-500">
-          harsh@example.com
-        </a>
-      </p>
+      <h2 className="text-4xl font-bold mb-6 text-red-400 text-center">Contact Me</h2>
+      <p className="text-gray-400 mb-4 text-center">Email: harshrawte.dev@gmail.com</p>
+      <p className="text-gray-400 text-center">LinkedIn: linkedin.com/in/harshrawte</p>
     </motion.section>
   );
 }
